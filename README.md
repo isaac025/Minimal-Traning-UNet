@@ -1,6 +1,6 @@
 # Using SLEAP to identify animal body-parts
 
-This project uses [sleap][https://sleap.ai] to
+This project uses [sleap](https://sleap.ai) to
 estimate on datasets body-parts of animals.
 
 ## What is SLEAP?
