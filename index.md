@@ -1,37 +1,18 @@
-## Welcome to GitHub Pages
+# Training and estimation on animal body-parts
 
-You can use the [editor on GitHub](https://github.com/isaac025/Minimal-Traning-UNet/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+This project uses [the SLEAP](https://sleap.ai) deep-learning framework in order
+to train a UNet to estimate on body-parts of animals, in this case of flies.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+## What is SLEAP?
 
-### Markdown
+SLEAP is a deep-learning framework that is built to estimate body-parts of animals
+on a given dataset.
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+Please visit follow [SLEAP's Tutorial](https://sleap.ai/tutorials/tutorial.html)
+to better understand and try them out!
 
-```markdown
-Syntax highlighted code block
+## The notebook
 
-# Header 1
-## Header 2
-### Header 3
+We provide a simple notebook 
+## References
 
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/isaac025/Minimal-Traning-UNet/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
