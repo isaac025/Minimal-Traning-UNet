@@ -16,7 +16,17 @@ to better understand and try them out!
 We provide a notebook with multiple functions that help manipulate the dataset
 a lot more easier.
 
-For example
+The dataset that sleap builds are divided into different images.
+
+For example:
+The it generates an instance image of the original video.
+
+*INSERT IMAGE* 
+
+and it also generates the Heatmaps or Confidence maps of where the 
+body part is.
+
+*INSERT IMAGE*
 ```
 def get_indx(list_of_GT, list_of_Pred)
 ```
