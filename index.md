@@ -22,7 +22,7 @@ For example, we can get the instance image of a video and its
 confidence maps (X and Y coordinates of where precisely a body-part
 is). The output pictures look like this.
 
-![](Image1.jph)
+![](Image2.jpg)
 
 After training, we can get the X and Y coordinates of the confidence
 maps generated and compare them to the ground truths. We developed a 
@@ -34,7 +34,7 @@ that helps us get the X and Y indexes of the confidence
 maps. With this we can easily compare them to the ground
 truths and see how well our network is performing. 
 
-![](Image2.jpg)
+![](Image1.jpg)
 
 ## References
 
