@@ -20,6 +20,7 @@ The dataset that sleap builds are divided into different images.
 For example, we can get the instance image of a video and its
 confidence maps (X and Y coordinates of where precisely a body-part
 is). The output pictures look like this.
+
 ![](Image2.jpg)
 
 After training, we can get the X and Y coordinates of the confidence
@@ -31,6 +32,7 @@ def get_indx(list_of_GT, list_of_Pred)
 that helps us get the X and Y indexes of the confidence
 maps. With this we can easily compare them to the ground
 truths and see how well our network is performing. 
+
 ![](Image1.jpg)
 
 ## References
