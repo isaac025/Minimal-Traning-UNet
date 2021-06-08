@@ -1,15 +1,15 @@
 # Post-estimation on animal Body-Parts using SLEAP
 
 This project uses [the SLEAP](https://sleap.ai) deep-learning framework in order
-to train a UNet to estimate on body-parts of animals, in this case of flies.
+to train a UNet to estimate on body-parts of animals, in this case of flies. Developed
+by Talmo Pereira, Elena Sizikova, Carlos Gonzalez, Sheik-Sedat Touray and Isaac Lopez.
 
 ## What is SLEAP?
 
 SLEAP is a deep-learning framework that is built to estimate body-parts of animals
-on a given dataset.
+on a given dataset. It was developed by Talmo Pereira and his team.
 
-Please visit follow [SLEAP's Tutorial](https://sleap.ai/tutorials/tutorial.html)
-to better understand and try them out!
+Please visit and follow [SLEAP's Tutorial](https://sleap.ai/tutorials/tutorial.html)!
 
 ## The notebook
 
@@ -17,6 +17,25 @@ We provide a notebook with multiple functions that help manipulate the dataset
 a lot more easier.
 The dataset that sleap builds are divided into different images.
 
+### The dataset
+The dataset comes from a dropbox link at the start of the notebook:
+```py
+!curl -L --output labels.slp https://www.dropbox.com/s/b990gxjt3d3j3jh/210205.sleap_wt_gold.13pt.pkg.slp?dl=1
+```
+*NOTE* This dataset belongs to Talmo Pereira and SLEAP
+
+The dataset which are .slp files are "Labels" that contains a various forms
+of the instance image (and the insatance image itself) from the original dataset,
+which in this case is a greyscale video.
+
+### The Network
+
+The Network developed by Talmo is a minimal UNet that uses an architechture
+from SLEAP. Clicke [here](https://sleap.ai/) for more information of the
+architechture.
+
+
+### Getting coordinates of Confidence Maps
 For example, we can get the instance image of a video and its
 confidence maps (X and Y coordinates of where precisely a body-part
 is). The output pictures look like this.
@@ -35,6 +54,8 @@ truths and see how well our network is performing.
 
 ![](Image1.jpg)
 
+### Future development
+Although AI is initial work
 ## References
 1. Deep Learning. (n.d.). https://www.deeplearningbook.org/. 
 
