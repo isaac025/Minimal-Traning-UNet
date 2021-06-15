@@ -36,7 +36,7 @@ the code below we generate the following.
 labels = sleap.load_file("labels.slp")
 labels.describe()
 ```
-![labels_image](labels.jpeg)
+![labels_image](labels.jpg)
 
 Each indiviual labels are frames and these frames contain
 two instances of the image one labeled and one not. Also it
@@ -45,7 +45,7 @@ label.
 ```py
 labeled_frame = labels[0]
 ```
-![labels_individual_image](labeled_frame.jpeg)
+![labels_individual_image](labeled_frame.jpg)
 
 We can take the one of the instances of the labeled frame
 and use it for any purpose desired.
