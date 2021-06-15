@@ -53,15 +53,30 @@ and use it for any purpose desired.
 instance = labeled_frame[0]
 ```
 
-
 ### The Network
 
 The Network developed by Talmo is a minimal UNet that uses an architechture
 from SLEAP. Click [here](https://sleap.ai/api/sleap.nn.architectures.unet.html#module-sleap.nn.architectures.unet) 
 for more information of the architechture.
 
+We create a UNet that is compatible with the input and output shapes that we're generating.
 ```py
+# Instantiate the backbone builder.
+unet = sleap.nn.architectures.unet.UNet(filters=32, filters_rate=1.5, down_blocks=4, up_blocks=3, up_interpolate=True)
 
+# Create the input layer (see above for the dimensions)
+x_in = tf.keras.layers.Input((160, 160, 1))
+
+# Create the feature extractor backbone.
+x_features, x_intermediate = unet.make_backbone(x_in)
+
+# Do a 1x1 conv with linear activation to remap activations to the number of channels in
+# the confidence maps (see above)
+x_confmaps = tf.keras.layers.Conv2D(filters=13, kernel_size=1, strides=1, padding="same")(x_features)
+
+# Create a Model that links the whole graph
+model = tf.keras.Model(x_in, x_confmaps)
+model.summary()
 ```
 
 ### Getting coordinates of Confidence Maps
@@ -84,7 +99,11 @@ truths and see how well our network is performing.
 ![](Image1.jpg)
 
 ### Future development
-Although AI is initial work
+Although A.I. and Machine Learning are in its initial stages, specifically on
+production-side, software like SLEAP can be of great use on medicine. It could
+potentially help doctors to better identify MRI scans, CT scans, X-rays, etc.,
+by being faster and taking a load of work out of the doctor. 
+
 ## References
 1. Deep Learning. (n.d.). https://www.deeplearningbook.org/. 
 
