@@ -15,25 +15,54 @@ Please visit and follow [SLEAP's Tutorial](https://sleap.ai/tutorials/tutorial.h
 
 We provide a notebook with multiple functions that help manipulate the dataset
 a lot more easier.
-The dataset that sleap builds are divided into different images.
+The dataset that sleap builds is a Labels-like container.
+Basically these labels contain instances of each image taken from the original video
+that when ran through SLEAP generate a file with multiple instances of an image and generate other
+metadata.
 
-### The dataset
-The dataset comes from a dropbox link at the start of the notebook:
+### The Dataset
+
+The dataset comes from a [dropbox link](https://www.dropbox.com/s/b990gxjt3d3j3jh/210205.sleap_wt_gold.13pt.pkg.slp?dl=1) 
+at the start of the notebook.
+
+*NOTE* This dataset belongs to Talmo Pereira and SLEAP.
+
+Labels files ".slp" provide the complete description of a project.
+Take the dataset used here of fruit-flies, when the file is loaded using 
+the sleap.load_file function, that takes a .slp file only, when running
+the code below we generate the following.
+
 ```py
-!curl -L --output labels.slp https://www.dropbox.com/s/b990gxjt3d3j3jh/210205.sleap_wt_gold.13pt.pkg.slp?dl=1
+labels = sleap.load_file("labels.slp")
+labels.describe()
 ```
-*NOTE* This dataset belongs to Talmo Pereira and SLEAP
+![labels_image](labels_image.jpeg)
 
-The dataset which are .slp files are "Labels" that contains a various forms
-of the instance image (and the insatance image itself) from the original dataset,
-which in this case is a greyscale video.
+Each indiviual labels are frames and these frames contain
+two instances of the image one labeled and one not. Also it
+contains where exactly on the frame are the coordinates of the
+label.
+```py
+labeled_frame = labels[0]
+```
+![labels_individual_image](labels_individual_image.jpeg)
+
+We can take the one of the instances of the labeled frame
+and use it for any purpose desired.
+```py
+instance = labeled_frame[0]
+```
+
 
 ### The Network
 
 The Network developed by Talmo is a minimal UNet that uses an architechture
-from SLEAP. Clicke [here](https://sleap.ai/) for more information of the
-architechture.
+from SLEAP. Click [here](https://sleap.ai/api/sleap.nn.architectures.unet.html#module-sleap.nn.architectures.unet) 
+for more information of the architechture.
 
+```py
+
+```
 
 ### Getting coordinates of Confidence Maps
 For example, we can get the instance image of a video and its
