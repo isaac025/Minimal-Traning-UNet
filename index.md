@@ -98,6 +98,9 @@ truths and see how well our network is performing.
 
 ![](Image1.jpg)
 
+### Results
+Validation: 
+Results: 
 ### Future development
 Although A.I. and Machine Learning are in its initial stages, specifically on
 production-side, software like SLEAP can be of great use on medicine. It could
