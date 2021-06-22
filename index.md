@@ -2,7 +2,7 @@
 
 This project uses [the SLEAP](https://sleap.ai) deep-learning framework in order
 to train a UNet to estimate on body-parts of animals, in this case of flies. Developed
-by Talmo Pereira, Elena Sizikova, Carlos Gonzalez, Sheik-Sedat Touray and Isaac Lopez.
+by Talmo Pereira, Elena Sizikova, Carlos Fernandez, Sheik-Sedat Touray and Isaac Lopez.
 
 ## What is SLEAP?
 
