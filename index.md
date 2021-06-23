@@ -38,7 +38,7 @@ labels.describe()
 ```
 ![labels_image](labels.jpg)
 
-Each indiviual labels are frames and these frames contain
+Each individual labels are frames and these frames contain
 two instances of the image one labeled and one not. Also it
 contains where exactly on the frame are the coordinates of the
 label.
@@ -98,9 +98,7 @@ truths and see how well our network is performing.
 
 ![](Image1.jpg)
 
-### Results
-Validation: 
-Results: 
+
 ### Future development
 Although A.I. and Machine Learning are in its initial stages, specifically on
 production-side, software like SLEAP can be of great use on medicine. It could
